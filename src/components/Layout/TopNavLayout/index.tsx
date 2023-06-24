@@ -1,6 +1,6 @@
 import { CSSProperties } from 'react';
 import { RouterProvider } from 'react-router-dom';
-import { router } from '../../../routes/index';
+import { router } from '@routes/index';
 
 const style : CSSProperties = {
   margin: '0',
