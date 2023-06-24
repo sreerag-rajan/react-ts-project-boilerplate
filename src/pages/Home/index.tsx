@@ -1,10 +1,10 @@
 import React from "react"
 
-export const Home = () => {
+export const Home : React.FC = () => {
 	return (
-		<React.Fragment>
+		<div>
 			<h1>HOME PAGE</h1>
       <h3>Work In Progress</h3>
-		</React.Fragment>
+		</div>
 	)
 }

@@ -1,4 +1,4 @@
-import APIWrapper from "src/services/ApiServices/apiService";
+import APIWrapper from "../services/ApiServices/apiService";
 
 const Bearer = localStorage.getItem('_platform_access_token');
 

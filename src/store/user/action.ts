@@ -1,5 +1,5 @@
 import { createAsyncThunk } from "@reduxjs/toolkit";
-import { PlatformAPI } from "src/config";
+import { PlatformAPI } from "../../config/apiConfig";
 import { setUser } from ".";
 
 export const login = createAsyncThunk(
