@@ -1,6 +1,4 @@
-import { CSSProperties } from 'react';
-import { RouterProvider } from 'react-router-dom';
-import { router } from '@routes/index';
+import { CSSProperties, PropsWithChildren } from 'react';
 
 const style : CSSProperties = {
   margin: '0',
@@ -9,14 +7,14 @@ const style : CSSProperties = {
   minHeight: '50rem',
 }
 
-export const TopNavLayout = () => {
+export const TopNavLayout = ({children} : PropsWithChildren) => {
   return (
     <div style={style}>
       <nav style={{backgroundColor: '#A4d5e2'}}>
 
       </nav>
       <main style={{backgroundColor: '#C9fb78'}}>
-        <RouterProvider router={router}/>
+        {children}
       </main>
     </div>
   );
