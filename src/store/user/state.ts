@@ -14,7 +14,7 @@ export interface IUserState {
 }
 
 const initialState: IUserState = {
-  id: -1,
+  id: 0,
   uuid: '',
   firstName: '',
   lastName: '',

@@ -3,3 +3,6 @@ export const ROLE = {
   ADMIN: "ADMIN",
   USER : "USER",
 }
+
+// export type IROLE = 'SUPER_ADMIN' | 'ADMIN' | 'USER';a
+export type IROLE = keyof typeof ROLE;

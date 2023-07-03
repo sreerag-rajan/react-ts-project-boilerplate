@@ -1,14 +1,11 @@
-import { RouterProvider } from 'react-router-dom';
-import { router } from '@routes/index';
+import { PropsWithChildren } from 'react';
 
-// interface DefaultLayoutProps {
-//   children: ReactNode;
-// }
 
-export const DefaultLayout = () => {
+
+export const DefaultLayout = ({children} : PropsWithChildren) => {
   return (
     <div>
-      <RouterProvider router = {router}/>
+      {children}
     </div>
   );
 };
