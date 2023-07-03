@@ -4,11 +4,11 @@ import { ILayouts } from "@components/Layout/interface";
 import { SideNavLayout } from "@components/Layout/SideNavLayout";
 import { TopNavLayout } from "@components/Layout/TopNavLayout";
 import { DefaultLayout } from "@components/Layout/Default";
+import { PrivateRoute } from "@components/PrivateRoutes/PrivateRoute";
 
 
 export const AllRoutes = () => {
   return(
-    <>
       <Routes>
         {
           routeList.map((route) => {
@@ -16,6 +16,7 @@ export const AllRoutes = () => {
               case ILayouts.SIDENAVLAYOUT:                
                 return (
                   <SideNavLayout>
+                    {route.isPrivate && <PrivateRoute allowedRoles={route.authorizedTo ||  null}/>}
                     <Route path={route.path} element={route.element} />
                   </SideNavLayout>
                 );
@@ -23,6 +24,7 @@ export const AllRoutes = () => {
               case ILayouts.TOPNAVLAYOUT:                
                 return (
                   <TopNavLayout>
+                    {route.isPrivate && <PrivateRoute allowedRoles={route.authorizedTo || null}/>}
                     <Route path={route.path} element={route.element} />
                   </TopNavLayout>
                 );
@@ -30,6 +32,7 @@ export const AllRoutes = () => {
               default:
                 return (
                   <DefaultLayout>
+                    {route.isPrivate && <PrivateRoute allowedRoles={route.authorizedTo || null}/>}
                     <Route path={route.path} element={route.element} />
                   </DefaultLayout>
                 )
@@ -37,7 +40,6 @@ export const AllRoutes = () => {
           })
         }
       </Routes>
-    </>
   )
 }
 
