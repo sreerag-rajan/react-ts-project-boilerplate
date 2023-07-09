@@ -9,12 +9,12 @@ import {theme} from './styles/theme.ts'
 
 ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
   <React.StrictMode>
-    <ThemeProvider theme={theme}>
     <BrowserRouter>
+    <ThemeProvider theme={theme}>
     <ReduxProvider store={store}>
       <App />
     </ReduxProvider>
-    </BrowserRouter>
     </ThemeProvider>
+    </BrowserRouter>
   </React.StrictMode>,
 )
